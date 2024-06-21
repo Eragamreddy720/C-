@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double number, epsilon = 1e-6; // Small number for precision
+    double low, high, mid, midCube;
+
+    // Input the number from the user
+    cout << "Enter a number to find its cube root: ";
+    cin >> number;
+
+    // Check for negative numbers
+    if (number < 0) {
+        cout << "Cube root is not defined for negative numbers." << endl;
+        return 1; // Exit the program with error code
+    }
+
+    low = 0.0;
+    high = number;
+
+    // Binary search for the cube root
+    while (high - low > epsilon) {
+        mid = (low + high) / 2.0;
+        midCube = mid * mid * mid;
+
+        if (midCube == number) {
+            break;
+        } else if (midCube < number) {
+            low = mid; // Cube root is greater, search in the higher half
+        } else {
+            high = mid; // Cube root is smaller, search in the lower half
+        }
+    }
+
+    // Output the cube root
+    cout << "Cube root of " << number << " is approximately: " << (low + high) / 2.0 << endl;
+
+    return 0;
+}
