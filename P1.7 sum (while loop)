@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, sum = 0, i = 0, number;
+
+    // Ask user for the number of elements to be summed
+    cout << "Enter the value of n: ";
+    cin >> n;
+
+    // Ask user to input the numbers
+    cout << "Enter the numbers: ";
+    
+    // While loop to read the numbers and calculate the sum
+    while (i < n) {
+        cin >> number;
+        sum += number;
+        i++;
+    }
+
+    // Output the result
+    cout << "The sum of the entered numbers is: " << sum << endl;
+
+    return 0;
+}
