@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, sum = 0, i = 1;
+
+    // Ask user for the input
+    cout << "Enter a positive integer: ";
+    cin >> num;
+
+    // While loop to calculate the sum of proper divisors of num
+    while (i <= num / 2) {
+        if (num % i == 0) {
+            sum += i;
+        }
+        i++;
+    }
+
+    // Check if the sum of divisors is equal to the number itself
+    if (sum == num) {
+        cout << num << " is a perfect number." << endl;
+    } else {
+        cout << num << " is not a perfect number." << endl;
+    }
+
+    return 0;
+}
