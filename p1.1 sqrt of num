@@ -1,0 +1,17 @@
+#include<iostream>
+#include<cmath>
+  using namespace std;
+int main(){
+	int n,i;
+	cout<<"Enter the number: ";
+	cin>>n;
+	if(n>0){
+		i=sqrt(n);
+		cout<<i;
+	}
+	else{
+		cout<<"not valid";
+	}
+	return 0;
+
+}
