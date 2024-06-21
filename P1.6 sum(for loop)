@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, sum = 0;
+
+    // Ask user for the number of elements to be summed
+    cout << "Enter the value of n: ";
+    cin >> n;
+
+    int arr[n];
+
+    // Ask user to input the numbers
+    cout << "Enter the numbers: ";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    // For loop to calculate the sum of the entered numbers
+    for (int i = 0; i < n; i++) {
+        sum += arr[i];
+    }
+
+    // Output the result
+    cout << "The sum of the entered numbers is: " << sum << endl;
+
+    return 0;
+}
